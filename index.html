@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reloj Digital 2024, en done el usuario puede programar una alarma." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Reloj Digital - 2024</title>
+</head>
+
+<body>
+    <!--Div Container-->
+    <div class="h-screen w-screen bg-yellow-100 flex flex-col justify-center items-center pt-10">
+        <!--Div central-->
+        <div class="border-2 border-amber-500 px-6 py-4 h-auto w-auto flex flex-col justify-center items-center gap-5">
+            <!--Tittle-->
+            <h1 class="text-amber-500">Reloj Digital</h1>
+
+            <!-- P donde ser va actualizar la hora cada un segundo -->
+            <p class="text-amber-500 text-6xl" id="pHora"></p>
+
+            <!--Boton set alarm-->
+            <button class="text-amber-500 border-2 border-amber-500 px-2 py-1 hover:bg-amber-500 hover:text-white"
+                id="btnSet">
+                Set Alarm
+            </button>
+        </div>
+
+        <!--Modal1-->
+        <div class="absolute">
+            <div
+                class="border-2 border-amber-500 px-7 py-9 h-auto w-auto flex flex-col justify-center items-center gap-5 bg-yellow-100 hidden" id="modal">
+                <!--Tittle-->
+                <h1 class="text-amber-500">Selecciona la hora:</h1>
+
+                <!-- input en donde usuario va a elegir el horario de la alarma.  -->
+                <label>
+                    <input name="input de la hora" class="w-64 text-center text-amber-500" type="time" id="inputTime" />
+                </label>
+                <!--Boton set alarm-->
+                <div class="flex flex-row w-auto h-auto gap-5">
+                    <button
+                        class="text-amber-500 border-2 border-amber-500 px-2 py-1 hover:bg-amber-500 hover:text-white"
+                        id="btnCancelar">
+                        cancelar
+                    </button>
+                    <button
+                        class="text-amber-500 border-2 border-amber-500 px-2 py-1 hover:bg-amber-500 hover:text-white"
+                        id="btnAceptar">
+                        Aceptar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal2-->
+        <div class="absolute">
+            <div
+                class="border-2 border-amber-500 px-16 py-14 h-auto w-auto flex flex-col justify-center items-center gap-5 bg-yellow-100 hidden" id="modal2">
+                <!--Tittle-->
+                <h1 class="text-amber-500">Alarma Sonando:</h1>
+
+                <!--Boton set alarm-->
+                <button class="text-amber-500 border-2 border-amber-500 px-2 py-1 hover:bg-amber-500 hover:text-white"
+                    id="btnTerminar">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
